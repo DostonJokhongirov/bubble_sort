@@ -4,17 +4,17 @@ def main():
     print(sorted_list)
     
 def bubble_sort(list_to_sort):
-    prss_list = list_to_sort.copy()
-    last_ndx = 1
-    swap = True
-    while swap:
-        swap = False
-        for i in range(len(prss_list) - last_ndx):
-            if prss_list[i] > prss_list[i + 1]:
-                swap = True
-                prss_list[i], prss_list[i + 1] = prss_list[i + 1], prss_list[i]
-        last_ndx += 1
+    processed_list = list_to_sort.copy()
+    sorting_boundary = 1
+    was_swap = True
+    while was_swap:
+        was_swap = False
+        for i in range(len(processed_list) - sorting_boundary):
+            if processed_list[i] > processed_list[i + 1]:
+                was_swap = True
+                processed_list[i], processed_list[i + 1] = processed_list[i + 1], processed_list[i]
+        sorting_boundary += 1
 
-    return prss_list
+    return processed_list
     
 main()
